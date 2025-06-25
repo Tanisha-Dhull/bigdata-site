@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 V's of Big Data</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #c9fdd7, #e6f5c9);
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    .hero-content {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: left;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .hero-content h1 {
+      color: #145a32;
+      font-size: 36px;
+      margin-bottom: 20px;
+      white-space: normal;
+    }
+
+    .hero-content p {
+      color: #2d4739;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content button {
+      background-color: #145a32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      box-shadow: 0 0 10px #6aff6a, 0 0 20px #6aff6a;
+    }
+
+    .hero-content button:hover {
+      background-color: #0e3f21;
+    }
+
+    .info-section {
+      background: #e8fbe9;
+      padding: 50px 20px;
+    }
+
+    .info-section h2 {
+      color: #145a32;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .v-card {
+      background: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .v-card:hover {
+      transform: scale(1.02);
+    }
+
+    .v-card h3 {
+      color: #0d3f24;
+      margin-bottom: 10px;
+    }
+
+    .v-card p {
+      color: #333;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      background-color: #145a32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const title = document.querySelector('.hero-content h1');
+      const fullText = title.textContent;
+      title.textContent = '';
+      let index = 0;
+      const typing = setInterval(() => {
+        title.textContent += fullText.charAt(index);
+        index++;
+        if (index === fullText.length) clearInterval(typing);
+      }, 50);
+    });
+
+    function getStarted() {
+      alert("Welcome to the Big Data Journey! Scroll down to explore the 6 V's.");
+    }
+  </script>
+</head>
+<body>
+  <nav style="background-color: #145a32; padding: 10px; text-align: center;">
+    <a href="#volume">Volume</a>
+    <a href="#velocity">Velocity</a>
+    <a href="#variety">Variety</a>
+    <a href="#veracity">Veracity</a>
+    <a href="#value">Value</a>
+    <a href="#variability">Variability</a>
+  </nav>
+  <nav>
+    <div><strong>Saranya Dhull</strong></div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Concepts</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello everyone, Welcome to my Computer Project about 6 V's</h1>
+      <p>This project introduces you to the core characteristics of Big Data — known as the 6 V's: Volume, Velocity, Variety, Veracity, Value, and Variability. Each 'V' reflects a unique challenge and opportunity in managing modern digital data.</p>
+      <p>Hope it helps you!</p>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Explore the 6 V's of Big Data</h1>
+      <p>Learn about Volume, Velocity, Variety, Veracity, Value, and Variability — the core characteristics of Big Data that define today's digital world.</p>
+      <button onclick="getStarted()">Get Started</button>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h2>Deep Dive into the 6 V's</h2>
+
+    <div class="v-card" id="volume">
+      <h3>Volume</h3>
+      <p>Volume refers to the vast amounts of data generated every second through devices, applications, sensors, and digital platforms. Managing this large-scale data requires scalable storage and efficient processing techniques.</p>
+    </div>
+
+    <div class="v-card" id="velocity">
+      <h3>Velocity</h3>
+      <p>Velocity captures the speed at which data is generated, transferred, and processed. Think real-time analytics, sensor streams, and instant transaction systems that demand quick responses and decision-making.</p>
+    </div>
+
+    <div class="v-card" id="variety">
+      <h3>Variety</h3>
+      <p>Data comes in many forms: structured data (databases), semi-structured (XML, JSON), and unstructured data (videos, social media posts, audio). Handling this variety effectively helps extract insights from diverse sources.</p>
+    </div>
+
+    <div class="v-card" id="veracity">
+      <h3>Veracity</h3>
+      <p>Veracity deals with the trustworthiness and quality of data. Inconsistent or incomplete data can lead to wrong conclusions, so maintaining integrity and cleaning processes is essential.</p>
+    </div>
+
+    <div class="v-card" id="value">
+      <h3>Value</h3>
+      <p>Not all data is useful. The key is to derive actionable value from data by analyzing and applying it to drive decisions, strategies, and innovations.</p>
+    </div>
+
+    <div class="v-card" id="variability">
+      <h3>Variability</h3>
+      <p>Variability refers to the inconsistency of data. It changes in meaning or format over time, often due to dynamic systems or varying contexts — making analysis more complex.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created as part of a school computer science project | © 2025 BigDataVision</p>
+  </footer>
+</body>
+</html>
